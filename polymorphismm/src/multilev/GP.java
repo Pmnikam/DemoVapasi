@@ -1,83 +1,84 @@
 package multilev;
 
-class GP {
+class GrandParent {
     String sName;
     String bg;
 
-    public GP() {
+    public GrandParent() {
         System.out.println("GP Constructor");
     }
 
-    public GP(String sName, String bg) {
+    public GrandParent(String sName, String bg) {
         this();
         this.sName = sName;
         this.bg = bg;
         System.out.println("GP pConstr");
     }
 
-    void eat(){
+    void eat() {
         System.out.println("Eat Healthy and fresh food");
     }
 
-    String canDrive(String car){
+    String canDrive(String car) {
         System.out.println(car);
         return "car";
     }
 }
 
-class Parent extends GP{
+class Parent extends GrandParent {
     String name;
 
-    void walk(){
+    void walk() {
         System.out.println("Parents like walking in garden");
     }
 
-    int stepCount(int count){
+    int stepCount(int count) {
         System.out.println(count);
         return count;
-
     }
 
-    Parent(){
+    Parent() {
         super();
         System.out.println("Parent Constructor");
     }
-    Parent(String name){
+
+    Parent(String name) {
         super();
-        this.name=name;
+        this.name = name;
         System.out.println("Parent pConstru");
     }
 }
-class Child extends Parent{
+
+class Child extends Parent {
     String gender;
 
-    Child(){
+    Child() {
         super();
         System.out.println("Child Constructor");
     }
-    Child(String gender){
+
+    Child(String gender) {
         super();
-        this.gender=gender;
-        System.out.println("Child pConstr---"+gender);
+        this.gender = gender;
+        System.out.println("Child pConstr---" + gender);
     }
 
-    void lovePlay(){
+    void lovePlay() {
         System.out.println("Children love playing in garden");
     }
 }
-class Main{
+
+class Main {
     public static void main(String[] args) {
-        Child c1= new Child();
+        Child c1 = new Child();
         c1.lovePlay();
         c1.stepCount(2000);
         c1.eat();
         c1.canDrive("Tata Punch");
 
-        Child c2= new Child("male");
+        Child c2 = new Child("male");
         c2.lovePlay();
         c2.stepCount(3000);
         c2.canDrive("i20");
-
-
     }
 }

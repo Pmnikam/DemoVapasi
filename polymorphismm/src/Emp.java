@@ -4,8 +4,7 @@ public class Emp {
     private float salary;
     private String ename;
 
-    Emp()
-    {
+    Emp() {
         System.out.println("Creating Employee");
     }
 
@@ -42,15 +41,13 @@ public class Emp {
         return ename;
     }
 
-    Emp(int id, float salary, String ename)
-    {
-        this.id=id;
-        this.salary=salary;
-        this.ename=ename;
+    Emp(int id, float salary, String ename) {
+        this.id = id;
+        this.salary = salary;
+        this.ename = ename;
     }
 
-    void display()
-    {
-        System.out.println("Employee ID: "+ this.id +","+"Salary: "+this.salary+","+"Name: "+this.ename);
+    void display() {
+        System.out.println("Employee ID: " + this.id + "," + "Salary: " + this.salary + "," + "Name: " + this.ename);
     }
 }
